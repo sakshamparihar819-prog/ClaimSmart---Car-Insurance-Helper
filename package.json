@@ -1,0 +1,16 @@
+{
+  "name": "claimsmart",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ClaimSmart — MERN app that decides whether to pay for car damage yourself or file an insurance claim (IRDAI NCB rules).",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n server,client -c yellow,cyan \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "seed": "npm run seed --prefix server",
+    "verify": "npm run verify --prefix server",
+    "build": "npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
